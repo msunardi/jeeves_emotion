@@ -1,0 +1,53 @@
+For use with Python 2.7.12 (< 2.7.18), Ubuntu 16.04, and ROS1
+
+1. Requirements.txt
+
+See changes in requirements.txt (original) --> requirements27.txt
+
+h5py==2.7.1
+imageio==2.6.1
+imgaug==0.2.7
+imutils==0.5.3
+Keras==2.2.4
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.0
+
+numpy==1.18.1 --> numpy==1.16.6
+
+opencv-python==4.2.0.32
+
+Pillow==7.0.0 --> Pillow==6.2.2
+
+scikit-image==0.16.2 --> scikit-image==0.14.2
+scikit-learn==0.22.1 --> scikit-learn==0.20.0
+
+scipy>=1.0.0
+sklearn>=0.0
+tensorboard==1.15.0
+
+tensorflow==1.15.2 --> tensorflow==1.15.0
+
+tensorflow-estimator==1.15.1
+
+queuelib==1.5.0 (added)
+
+
+2. Using pip
+
+Install dependencies using pip2.7, e.g.
+
+pip2.7 install -r requirements27.txt
+
+(no sudo)
+
+
+
+3. Code Changes
+
+In deployment.video_threading_optimization.py line:2
+
+(ORIGINAL) from queue import Queue
+
+(TO) import Queue
+
+
